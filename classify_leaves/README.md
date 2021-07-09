@@ -4,6 +4,11 @@
 
 dataset is the file leaves_data
 
+single-GPU 
+python train.py
+muti-GPU 
+accelerate launch train.py
+
 Architecture:
 
 - train.py 

@@ -12,6 +12,7 @@ import torch
 # import from other file
 from dataset import pre_data
 from model import initialize_model
+from config import default_config
 import utils
 
 import ttach as tta
@@ -32,20 +33,7 @@ test_path = 'leaves_data/test.csv'
 # we already have the iamges floder in the csv file，so we don't need it here
 img_path = 'leaves_data/'
 
-train_name = 'test_accelerator'
-config = dict(
-    batch_size=45,
-    num_epoch=5,
-    learning_rate=3e-4,             # learning rate of Adam
-    weight_decay=0.001,             # weight decay 
-
-    warm_up_epochs=10,
-    model_path='./model/'+train_name+'_model.ckpt',
-    saveFileName='./result/'+train_name+'_pred.csv',
-    num_workers=2,
-    model_name='effnetv2',
-)
-
+config = default_config
 def predict(model_path, test_loader, saveFileName, iftta):
 
     ## predict

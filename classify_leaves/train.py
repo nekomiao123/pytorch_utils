@@ -17,27 +17,13 @@ import torch.nn.functional as F
 from dataset import pre_data
 from model import initialize_model
 from utils import LabelSmoothCELoss, get_device
+from config import default_config
 
 from accelerate import Accelerator
 accelerator = Accelerator()
 device = accelerator.device
 
-train_name = 'test_accelerator'
-# hyperparameter
-default_config = dict(
-    batch_size=32,
-    num_epoch=5,
-    learning_rate=3e-4,             # learning rate of Adam
-    weight_decay=0.001,             # weight decay 
-
-    warm_up_epochs=10,
-    model_path='./model/'+train_name+'_model.ckpt',
-    saveFileName='./result/'+train_name+'_pred.csv',
-    num_workers=2,
-    model_name='effnetv2',
-)
-
-wandb.init(project='leaves_classfier', entity='nekokiku', config=default_config, name=train_name)
+wandb.init(project='leaves_classfier', entity='nekokiku', config=default_config, name=default_config['train_name'])
 config = wandb.config
 
 def train(train_loader, val_loader, num_epoch, learning_rate, weight_decay, model_path):
