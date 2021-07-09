@@ -1,2 +1,6 @@
-
 .DS_Store
+/classify_leaves/__pycache__
+/classify_leaves/leaves_data
+/classify_leaves/model
+/classify_leaves/result
+/classify_leaves/wandb
