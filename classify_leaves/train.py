@@ -4,7 +4,6 @@ Main file for training model
 
 # import common libraries
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '4,5'
 import math
 import wandb
 import numpy as np

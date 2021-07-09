@@ -7,7 +7,7 @@ dataset is the file leaves_data
 single-GPU 
 python train.py
 muti-GPU 
-accelerate launch train.py
+CUDA_VISIBLE_DEVICES=4,5 accelerate launch train.py
 
 Architecture:
 
