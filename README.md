@@ -2,7 +2,7 @@
 
 example 是一个通用的示例文件，里面是空的
 
-classify_leaves 是一个树叶分类的示例文件
+classify_leaves 是一个kaggle中树叶分类比赛的示例文件，
 
 代码结构和实用的pytorch用法
 
