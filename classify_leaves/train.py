@@ -17,6 +17,9 @@ from dataset import pre_data
 from model import initialize_model
 from utils import LabelSmoothCELoss, get_device
 from config import default_config
+# ignore the warnings
+import warnings
+warnings.filterwarnings('ignore')
 
 from accelerate import Accelerator
 accelerator = Accelerator()
