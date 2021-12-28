@@ -1,6 +1,6 @@
 # experiment name
-exp_name: "test"
-exp_desc: "test our yaml file"
+exp_name: "test2"
+exp_desc: "test "
 
 batch_size: 64
 
