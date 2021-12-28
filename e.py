@@ -1,4 +1,3 @@
-# install by "pip install wandb"
 import wandb
 import hydra
 from omegaconf import DictConfig, OmegaConf
