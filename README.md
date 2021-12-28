@@ -4,6 +4,8 @@ example 是一个通用的示例文件，里面是空的
 
 classify_leaves 是一个kaggle中树叶分类比赛的示例文件
 
+new_classify_leaves_example 是一个kaggle中树叶分类比赛的示例文件，使用了hydra wandb等工具，实验记录更加完整
+
 代码结构和实用的pytorch用法
 
 代码结构:

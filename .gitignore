@@ -4,4 +4,6 @@
 /classify_leaves/model
 /classify_leaves/result
 /classify_leaves/wandb
-
+/new_classify_leaves_example/leaves_data
+/new_classify_leaves_example/outputs
+/new_classify_leaves_example/__pycache__/
