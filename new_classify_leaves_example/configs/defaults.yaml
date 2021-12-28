@@ -4,7 +4,7 @@ exp_desc: "test our yaml file"
 
 batch_size: 64
 
-num_epochs: 100
+num_epochs: 2
 
 learning_rate: 0.001
 

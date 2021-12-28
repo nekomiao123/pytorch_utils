@@ -14,10 +14,10 @@ from torchvision import transforms
 from torch.utils.data import Dataset, DataLoader
 
 
-train_path = '/home/eehfyao/code/learn/pytorch_utils/new_classify_leaves/leaves_data/train.csv'
-test_path = '/home/eehfyao/code/learn/pytorch_utils/new_classify_leaves/leaves_data/test.csv'
+train_path = './leaves_data/train.csv'
+test_path = './leaves_data/test.csv'
 # we already have the iamges floder in the csv file，so we don't need it here
-img_path = '/home/eehfyao/code/learn/pytorch_utils/new_classify_leaves/leaves_data/'
+img_path = './leaves_data/'
 
 labels_dataframe = pd.read_csv(train_path)
 # Create list of alphabetically sorted labels.
