@@ -44,9 +44,9 @@ def wandb_init(cfg: DictConfig):
     OmegaConf.save(config=cfg, f=os.path.join(wandb.run.dir, 'conf.yaml'))
 
 def train(train_loader, val_loader, cfg):
-    model_path = os.path.join(wandb.run.dir, cfg.exp_name + '_model.pt')
+    model_path = os.path.join(os.getcwd(), cfg.exp_name + '_model.pt')
     print(model_path)
-    save_file_name = os.path.join(wandb.run.dir, cfg.exp_name + '_pred.csv')
+    save_file_name = os.path.join(os.getcwd(), cfg.exp_name + '_pred.csv')
     print(save_file_name)
 
     num_epoch, learning_rate, weight_decay = cfg.num_epochs, cfg.learning_rate, cfg.weight_decay

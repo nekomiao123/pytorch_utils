@@ -14,10 +14,10 @@ from torchvision import transforms
 from torch.utils.data import Dataset, DataLoader
 
 
-train_path = './leaves_data/train.csv'
-test_path = './leaves_data/test.csv'
+train_path = os.path.join(os.getcwd(), 'leaves_data/train.csv')
+test_path = os.path.join(os.getcwd(), 'leaves_data/test.csv')
 # we already have the iamges floder in the csv file，so we don't need it here
-img_path = './leaves_data/'
+img_path = os.path.join(os.getcwd(), 'leaves_data/')
 
 labels_dataframe = pd.read_csv(train_path)
 # Create list of alphabetically sorted labels.
@@ -27,7 +27,7 @@ n_classes = len(leaves_labels)
 class_to_num = dict(zip(leaves_labels, range(n_classes)))
 num_to_class = {v : k for k, v in class_to_num.items()}
 
-# my onw dataset
+# my own dataset
 class LeavesData(Dataset):
     def __init__(self, csv_path, file_path, mode='train', valid_ratio=0.2, resize_height=256, resize_width=256):
         """
@@ -113,6 +113,7 @@ class LeavesData(Dataset):
         return self.real_len
 
 def pre_data(batch_size, num_workers):
+
     train_dataset = LeavesData(train_path, img_path, mode='train')
     val_dataset = LeavesData(train_path, img_path, mode='valid')
     test_dataset = LeavesData(test_path, img_path, mode='test')
@@ -143,4 +144,7 @@ if __name__ == '__main__':
     batch_size = 32
     num_workers = 4
     print("loading data")
-    train_loader, val_loader, test_loader = pre_data(batch_size, num_workers)
+    print(os.getcwd())
+    print(train_path)
+    print(img_path)
+    # train_loader, val_loader, test_loader = pre_data(batch_size, num_workers)
