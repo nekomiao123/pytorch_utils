@@ -27,3 +27,10 @@ python train.py num_epochs=10
 实用的pytorch用法
 
 https://www.nekokiku.cn/2021/06/04/CV-tricks/
+
+参考仓库：
+
+1. [PyTorch-style](https://github.com/IgorSusmelj/pytorch-styleguide)
+2. [Lightning-Hydra-Template](https://github.com/ashleve/lightning-hydra-template#project-structure)
+3. [Torch-base](https://github.com/ahangchen/torch_base)
+

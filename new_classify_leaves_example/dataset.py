@@ -13,7 +13,6 @@ import torch.nn.functional as F
 from torchvision import transforms
 from torch.utils.data import Dataset, DataLoader
 
-
 train_path = os.path.join(os.getcwd(), 'leaves_data/train.csv')
 test_path = os.path.join(os.getcwd(), 'leaves_data/test.csv')
 # we already have the iamges floder in the csv file，so we don't need it here
